@@ -1,0 +1,15 @@
+<div class="card  h-100 " [ngClass]="{'w-100':hide,'hide-align':hide}">
+    <div class="card-body h-100 card-style" [ngClass]="{'hide':hide}">
+      <div class="card-title card-title-style text-center">Informations</div>
+      <div class="card-text">
+        <ul>
+          <li class="fw-bold text-danger">Unity:<span class="ps-3 text-light">{{unity}}</span></li>
+          <li class="fw-bold text-danger">Value:<span class="ps-3 text-light">{{value|number:"2.0-3"}}</span></li>
+          <li class="fw-bold text-danger">Date:<span class="ps-3 text-light">{{date}}</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row justify-content-center my-2">
+        <button class="btn w-75 hide-button" (click)="Onclick()">{{hideStatus}}</button>
+    </div>
+</div>

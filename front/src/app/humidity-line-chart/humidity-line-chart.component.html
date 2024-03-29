@@ -1,0 +1,35 @@
+<div class="row px-2">
+  <div class="col-7">
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [legend]="legend"
+      [legendPosition]="legendPosition"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [timeline]="timeline"
+      [results]="multi"
+      (select)="onSelect($event)"
+      style="fill: white;
+      color: white;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      "
+      >
+    </ngx-charts-line-chart></div>
+    <div [ngClass]="{'col-5':!hide,'col-12':hide}">
+      <app-informations 
+      [value]="value" 
+      [unity]="unity" 
+      [date]="date" 
+      class="row h-100  justify-content-end"
+      (hideEvent)="onHide($event)"
+      ></app-informations>
+    </div>
+  </div>
+    <!-- (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)" -->

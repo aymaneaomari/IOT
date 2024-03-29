@@ -1,0 +1,30 @@
+<div class="control-style">
+    <div class="row p-0 m-0 justify-content-around">
+        <div class="container-fluid container-style p-0 my-3 h-100 col-lg-5 mx-2">
+            <div class="card w-100 h-100">
+                <div class="card-body w-100 h-100 ">
+                    <div class="card-title text-light fw-bold">Notifications</div>
+                    <div class="card-text">
+                        <ul>
+                            <li 
+                            [ngClass]="{'danger-high':dangerLevel=='high',
+                            'danger-mid':dangerLevel=='mid',
+                            'danger-low':dangerLevel=='low'
+                            }">
+                            {{notificationMessage}} 
+                             <span>
+                                
+                             </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid container-style p-0 my-3 h-100 col-lg-5">
+            <div class="w-100 h-100 button-container-style ">
+                <button class="btn px-3 py-2" (click)="updateStatus()" [ngClass]="{'btn-control-style-on':status=='ON','btn-control-style-off':status=='OFF'}" [disabled]="status=='ON'">{{status}}</button>
+            </div>
+        </div>
+    </div>
+</div>

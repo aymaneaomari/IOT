@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg  navbar-style shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img [src]="Logo" width="50" height="50" alt="">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="onClick()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{display:disp}">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link a-style" aria-current="page" [routerLink]="['/Dashes','Temperature']" routerLinkActive="fw-bold text-light"  >Dashes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-style" routerLink="/Controls" routerLinkActive="fw-bold text-light" [routerLinkActiveOptions]="{exact:true}">Controls</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

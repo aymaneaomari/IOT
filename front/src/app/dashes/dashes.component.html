@@ -1,0 +1,23 @@
+
+<div class="container-fluid p-0 Dashes-style">
+    <div class="row h-100 w-100 justify-content-between">
+        <aside class="col-2 p-0">
+            <ul>
+                <li [routerLink]="['/Dashes','Temperature']">Temperature</li>
+                <li [routerLink]="['/Dashes','AirHumidity']">Air Humidity</li>
+                <li [routerLink]="['/Dashes','SoilHumidity']">Soil Humidity</li>
+            </ul>
+        </aside>
+        <div class="col-10 p-0">
+            <div class="row justify-content-center my-4">
+                <p class="h2 text-header text-center" 
+                [ngClass]="{'text-header-temperature':tempLineChart,'text-header-humidity':humidityLineChart||soilHumidityLineChart}">{{header}}</p>
+            </div>
+            <div class="row justify-content-center m-2 ">
+                <div class="border py-2 mx-2">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
